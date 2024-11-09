@@ -40,7 +40,7 @@ def scan(code):
 
 @app.route('/')
 def index():
-    return render_template('index1.html')
+    return render_template('index.html')
 
 @app.route('/scan', methods=['POST'])
 def scan_code():
