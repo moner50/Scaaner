@@ -42,11 +42,13 @@ Recursive Descent Parsing is a top-down parsing technique where each non-termina
 ### Example Workflow
 - Define Grammar:
   ```
-  S -> aA | b
-  A -> a | bB
-  B -> c
+  S -> aSb
+  s -> bAc
+  A -> bS
+  a->a
+  
   ```
-- Input String: `"aac"`
+- Input String: `"abbbaccb"`
 - Output: Accepted with a parse tree generated.
 
 ## Features
