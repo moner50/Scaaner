@@ -1,17 +1,14 @@
-
 # Compiler Design
 
-This project presents a simple compiler built in Python, currently implementing only the scanner phase of the compilation process. The scanner, or lexical analyzer, tokenizes input code, breaking it down into meaningful symbols (tokens) for further analysis.
+This project presents a simple compiler built in Python, implementing both the scanner (lexical analyzer) and a Recursive Descent Parser phases of the compilation process. These phases tokenize input code and parse it to ensure it adheres to the grammar rules of a programming language.
 
 ## Overview
-The goal of this project is to provide a foundational understanding of compiler design principles, focusing on the initial stage of lexical analysis. The scanner reads source code and converts it into a series of tokens that represent basic language constructs such as identifiers, operators, numbers, and more.
-
-This project offers developers valuable insights into the internal mechanisms of a compiler, especially regarding the tokenization process and foundational programming language structures.
+The goal of this project is to provide a foundational understanding of compiler design principles, focusing on lexical analysis and parsing. The scanner reads source code and converts it into a series of tokens, while the parser checks the token sequence against grammar rules, ensuring syntactic correctness and generating a parse tree.
 
 ## Lexical Analysis
 Lexical analysis, also known as lexing or tokenization, is the first phase of the compiler. It scans the raw source code and converts it into a sequence of tokens, which represent the smallest units of meaning in the code. This phase is essential as it lays the groundwork for parsing and other subsequent steps in the compilation process.
 
-## Token Types
+### Token Types
 The scanner handles various types of tokens in the code, including:
 
 - **Keywords**: Reserved words like `if`, `else`, `for`, and `while` that have specific meanings in the programming language.
@@ -23,23 +20,59 @@ The scanner handles various types of tokens in the code, including:
 
 Each token type plays a critical role in understanding the structure of the code and ensuring it adheres to the syntax of the language.
 
-## Features
-- **Lexical Analysis**: Scans input code to generate tokens
-- **Support for Basic Tokens**: Identifies key elements like identifiers, numbers, and arithmetic operators
-- **Error Detection**: Handles and flags unexpected characters or unsupported symbols
+## Recursive Descent Parsing
+Recursive Descent Parsing is a top-down parsing technique where each non-terminal in the grammar is associated with a function. This project implements a Recursive Descent Parser to validate input strings against a specified grammar and generate a parse tree.
 
-## Usage
+### Features
+- **Grammar Input**: Users can define custom grammars interactively.
+- **String Parsing**: The parser checks if the given input string can be derived from the grammar.
+- **Parse Tree Generation**: Constructs a parse tree using Graphviz for visualization.
+- **Error Handling**: Ensures input adheres to grammar rules and flags incorrect strings.
+
+### Usage
+1. **Define a Grammar**:
+   - Start the program and input the number of non-terminals.
+   - Define the production rules for each non-terminal.
+2. **Check a String**:
+   - Input the string to check if it can be derived from the grammar.
+   - If valid, a parse tree is generated and saved as `parser_tree.png`.
+3. **Interactive Menu**:
+   - Allows switching between grammars, testing new strings, and exiting the program.
+
+### Example Workflow
+- Define Grammar:
+  ```
+  S -> aA | b
+  A -> a | bB
+  B -> c
+  ```
+- Input String: `"aac"`
+- Output: Accepted with a parse tree generated.
+
+## Features
+- **Lexical Analysis**: Scans input code to generate tokens.
+- **Parsing**: Validates token sequences against grammar rules.
+- **Parse Tree Visualization**: Generates graphical representations of derivations.
+- **Error Detection**: Handles invalid inputs and unsupported grammar constructs.
+
+## Usage Instructions
+### Scanner
 1. Place your code in a text file (e.g., `code.txt`) within the project directory.
 2. Open `scanner.py` and modify the `filePath` variable to reference your code file.
 3. Run `scanner.py` to analyze your code and retrieve tokens.
 
-We hope you enjoy exploring the foundational steps of compiler design through this Scanner phase. Happy coding!
+### Parser
+1. Run the parser program.
+2. Follow the interactive prompts to define a grammar and test strings.
+3. View the parse tree in `parser_tree.png` if the string is accepted.
 
+We hope you enjoy exploring the foundational steps of compiler design through these phases. Happy coding!
 
 ## Team Members
 
 - **Moner Mohamad Moner Tantawi**
-- **kareem Eldeen Ahmed**
-- **karim maher abdelrahim abdelatti**
-- **A'laa  Amin Abdulaziz Elgezery**
+- **Kareem Eldeen Ahmed**
+- **Karim Maher Abdelrahim Abdelatti**
+- **A'laa Amin Abdulaziz Elgezery**
 - **Habiba Abo Khalil Hadaad**
+
