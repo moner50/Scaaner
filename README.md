@@ -38,7 +38,7 @@ We hope you enjoy exploring the foundational steps of compiler design through th
 
 ## Team Members
 
-- **Moner Mohamad MonerTantawi**
+- **Moner Mohamad Moner Tantawi**
 - **kareem Eldeen Ahmed**
 - **karim maher abdelrahim abdelatti**
 - **A'laa  Amin Abdulaziz Elgezery**
