@@ -50,6 +50,8 @@ Recursive Descent Parsing is a top-down parsing technique where each non-termina
   ```
 - Input String: `"abbbaccb"`
 - Output: Accepted with a parse tree generated.
+![photo_2024-12-19_14-23-06](https://github.com/user-attachments/assets/f03be0f7-8069-43ba-b856-4f14c2e46316)
+
 
 ## Features
 - **Lexical Analysis**: Scans input code to generate tokens.
